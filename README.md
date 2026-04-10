@@ -1,27 +1,32 @@
-# 🌌 Neon Air Draw — AI Spatial Interface
+# 🌌 Neon Hands
 
-A high-performance, real-time AI air drawing web application that utilizes advanced hand tracking for a "Minority Report" style spatial interface. 
+A high-performance, real-time AI air drawing web application built around advanced hand tracking and spatial gestures.
 
-Draw in the air with your dominant hand and manipulate your creations in real-time with your non-dominant hand using intuitive gestures (Move, Scale, Rotate).
+Draw with your dominant hand while the secondary hand manipulates strokes in real time using Move, Scale, and Rotate controls.
 
 ## ✨ Key Features
 
-*   **✋ Dual-Hand Interaction**: 
-    *   **Right Hand (Dominant)**: Handles high-precision drawing, selective erasing, and canvas clearing.
-    *   **Left Hand (Secondary)**: Dedicated to spatial transformations (Move, Scale, Rotate) of existing strokes.
-*   **📐 Non-Destructive Transforms**: Strokes retain their original coordinate data. All manipulations (TX, TY, Scale, Rotation) are applied at render time via matrix-based math.
-*   **🕶️ Minimalist Glassmorphism UI**: A premium, aesthetic interface with real-time HUD and visual feedback guides.
-*   **⚡ High Performance**: Native WebGL-based rendering engine optimized for 60FPS fluid interactions.
-*   **🌀 Physics-Based Interaction**: Smooth inertia on stroke movement and snap-to-angle (45°) for rotation.
-*   **📖 Gesture Guide**: Built-in interactive manual explaining every movement.
+*   **✋ Dual-Hand Interaction**
+    *   **Right Hand (Dominant)**: High-precision drawing, selective erasing, and canvas clearing.
+    *   **Left Hand (Secondary)**: Spatial transforms for existing strokes: Move, Scale, and Rotate.
+*   **📐 Non-Destructive Transforms**
+    *   Strokes preserve original coordinates, while translation, scaling, and rotation are applied at render time using matrix math.
+*   **🕶️ Glassmorphism UI**
+    *   Clean neon-inspired interface with real-time HUD cues and gesture feedback.
+*   **⚡ Smooth Performance**
+    *   Optimized rendering for fluid interaction and responsive motion.
+*   **🌀 Physics-Inspired Behavior**
+    *   Intuitive inertia for stroke movement and 45° rotation snap points.
+*   **📖 Built-In Gesture Guide**
+    *   Helps users learn the control scheme without leaving the app.
 
 ## 🛠️ Tech Stack
 
 *   **Frontend**: React + Vite
 *   **Hand Tracking**: @mediapipe/hands
 *   **Animations**: Framer Motion
-*   **Icons**: Lucide React (with custom inline SVG fallbacks for brand icons)
-*   **Styling**: Vanilla CSS (Modern Glassmorphism & Neon Aesthetics)
+*   **Icons**: Lucide React with inline SVG fallbacks
+*   **Styling**: Vanilla CSS with modern glassmorphism and neon accents
 
 ## 🎮 Gesture Manual
 
@@ -29,32 +34,26 @@ Draw in the air with your dominant hand and manipulate your creations in real-ti
 | Gesture | Action |
 |---|---|
 | ☝️ **Index Up** | Start drawing a stroke |
-| 🤏 **Pinch** | Selective eraser (intersects with fingertip path) |
+| 🤏 **Pinch** | Erase selectively along fingertip path |
 | ✊ **Fist** | Clear the entire canvas |
 
 ### 🖐️ Control Hand (Left Hand)
-| Gesture | Action | Visual Feedback |
+| Gesture | Action | Feedback |
 |---|---|---|
-| ✌️ **Two Fingers** | **Move** nearest stroke | Blue crosshair + glow |
-| 🤏 **Pinch & Spread** | **Scale** stroke size | Concentric rings + % label |
-| 🤚 **Open Palm** | **Rotate** stroke | Orange arc + snap points |
+| ✌️ **Two Fingers** | Move the nearest stroke | Blue crosshair + glow |
+| 🤏 **Pinch & Spread** | Scale the selected stroke | Concentric rings + percentage label |
+| 🤚 **Open Palm** | Rotate the stroke | Orange arc with snap indicators |
 
 ## 🚀 Getting Started
 
-1.  **Install Dependencies**:
+1.  Install dependencies:
     ```bash
     npm install
     ```
-2.  **Run Development Server**:
+2.  Launch the development server:
     ```bash
     npm run dev
     ```
-3.  **Use**: Grant camera permissions and raise your hands in view!
+3.  Grant camera access and place your hands in view.
 
-## 👨‍💻 Developer
-**Akshat Singh**  
-📸 Instagram: [@code.akshat.in](https://www.instagram.com/code.akshat.in/)  
-🐙 GitHub: [Axshatt](https://github.com/Axshatt)
 
----
-*Built with passion for AI and Spatial Computing.*
